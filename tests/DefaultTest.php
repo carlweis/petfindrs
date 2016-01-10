@@ -13,7 +13,7 @@ class DefaultTest extends TestCase
     {
         $this->get('/')
             ->seeJson([
-                'name'       => 'PetFindrs API',
+                'name'       => 'PetFinders API',
                 'version'    => '1.0',
                 'statusCode' => 200
             ]);
