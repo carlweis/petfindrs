@@ -43,6 +43,13 @@ class CountryController extends ApiController
         return $this->respondWithCORS($data);
     }
 
+    /**
+     * Returns all active countries.
+     *
+     * @param Manager $fractal
+     * @param CountryTransformer $countryTransformer
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function active(Manager $fractal, CountryTransformer $countryTransformer)
     {
         $countries = $this->countryRepository->active();
