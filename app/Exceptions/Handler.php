@@ -49,23 +49,23 @@ class Handler extends ExceptionHandler
     {
         if ($e instanceof HttpException)
         {
-//            switch($e->getStatusCode())
-//            {
-//                case 404:
-//                    return response()->json([
-//                        'message' => 'Invalid API endpoint specified',
-//                        'statusCode' => $e->getStatusCode()
-//                    ]);
-//                break;
-//                default:
-//
-//                    return response()->json([
-//                        'message' => $e->getMessage(),
-//                        'statusCode' => $e->getStatusCode()
-//                    ]);
-//                break;
-//
-//            }
+            switch($e->getStatusCode())
+            {
+                case 404:
+                    return response()->json([
+                        'message' => 'Invalid API endpoint specified',
+                        'statusCode' => $e->getStatusCode()
+                    ]);
+                break;
+                default:
+
+                    return response()->json([
+                        'message' => $e->getMessage(),
+                        'statusCode' => $e->getStatusCode()
+                    ]);
+                break;
+
+            }
         }
 
         return parent::render($request, $e);
