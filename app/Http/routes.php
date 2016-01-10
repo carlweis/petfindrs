@@ -26,5 +26,9 @@ $app->get('/', function () use ($app) {
 $app->group(['namespace' => 'App\Http\Controllers\V1\Locations', 'prefix' => 'v1/locations'], function() use($app) {
     $app->get('countries', 'CountryController@index');
     $app->get('countries/active', 'CountryController@active');
+    $app->get('countries/{id}', 'CountryController@find');
+    $app->get('countries/code/{code}','CountryController@findByCode');
+    $app->get('countries/name/{name}','CountryController@findByName');
+    $app->get('countries/lat/{lat}/lon/{lon}','CountryController@findByLocation');
 });
 

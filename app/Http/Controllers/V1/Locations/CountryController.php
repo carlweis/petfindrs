@@ -61,4 +61,83 @@ class CountryController extends ApiController
         }
         return $this->respondWithCORS($data);
     }
+
+    /**
+     * Returns country by id.
+     *
+     * @param Manager $fractal
+     * @param CountryTransformer $countryTransformer
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function find(Manager $fractal, CountryTransformer $countryTransformer, $id)
+    {
+        $countries = $this->countryRepository->find($id);
+        $collection = new Collection($countries, $countryTransformer);
+        $data = $fractal->createData($collection)->toArray();
+
+        if (!$data) {
+            return $this->respondWithError("No Country Found with id $id");
+        }
+        return $this->respondWithCORS($data);
+    }
+
+    /**
+     * Returns country by code.
+     *
+     * @param Manager $fractal
+     * @param CountryTransformer $countryTransformer
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function findByCode(Manager $fractal, CountryTransformer $countryTransformer, $code)
+    {
+        $countries = $this->countryRepository->findByCode($code);
+        $collection = new Collection($countries, $countryTransformer);
+        $data = $fractal->createData($collection)->toArray();
+
+        if (!$data) {
+            return $this->respondWithError("No Country Found with code $code");
+        }
+        return $this->respondWithCORS($data);
+    }
+
+    /**
+     * Returns country by name.
+     *
+     * @param Manager $fractal
+     * @param CountryTransformer $countryTransformer
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function findByName(Manager $fractal, CountryTransformer $countryTransformer, $name)
+    {
+        $name = ucwords(urldecode($name));
+        $countries = $this->countryRepository->findByName($name);
+        $collection = new Collection($countries, $countryTransformer);
+        $data = $fractal->createData($collection)->toArray();
+
+        if (!$data) {
+            return $this->respondWithError("No Country Found with name $name");
+        }
+        return $this->respondWithCORS($data);
+    }
+
+    /**
+     * Returns country by name.
+     *
+     * @param Manager $fractal
+     * @param CountryTransformer $countryTransformer
+     * @param $lat
+     * @param $lon
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function findByLocation(Manager $fractal, CountryTransformer $countryTransformer, $lat, $lon)
+    {
+        $countries = $this->countryRepository->findByLocation($lat, $lon);
+        $collection = new Collection($countries, $countryTransformer);
+        $data = $fractal->createData($collection)->toArray();
+
+        if (!$data) {
+            return $this->respondWithError("No Country Found with location $lat, $lon");
+        }
+        return $this->respondWithCORS($data);
+    }
 }
