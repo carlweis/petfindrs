@@ -88,6 +88,7 @@ $app->singleton(
 */
 $app->register(App\PetFindrs\Locations\LocationServiceProvider::class);
 
+
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
