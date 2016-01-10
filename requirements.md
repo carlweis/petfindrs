@@ -17,6 +17,12 @@ Use for testing branches, before merging into master.
        - Top 10 Cities
      *Resources*
      Country
+      - Repository Interface
+        - all
+        - active
+        - findByCode
+        - findByName
+        - findByLocation ( lat, lon)
      State
      City
 
