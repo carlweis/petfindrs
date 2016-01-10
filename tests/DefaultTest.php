@@ -5,11 +5,12 @@ use Laravel\Lumen\Testing\DatabaseTransactions;
 class DefaultTest extends TestCase
 {
     /**
-     * A basic test example.
+     * Test to make sure we can hit the root url.
      *
+     * @test
      * @return void
      */
-    public function testExample()
+    public function can_return_api_version()
     {
         $this->get('/')
             ->seeJson([

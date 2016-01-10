@@ -28,6 +28,15 @@ Use for testing branches, before merging into master.
 
 ## Endpoints
 
+    - Locations
+      - Countries
+        /locations/countries - all
+        /locations/countires/active - all active countries
+        /locations/countries/code/{code} - country by code
+        /locations/countries/name/{name} - country by name
+        /locations/countries/location/{latitude}/{longitude} - country by location
+      
+
 ## Tests
 
 ## Deployment

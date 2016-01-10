@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
 
+use Illuminate\Http\Response as IlluminateResponse;
+
 class Handler extends ExceptionHandler
 {
     /**
@@ -47,22 +49,23 @@ class Handler extends ExceptionHandler
     {
         if ($e instanceof HttpException)
         {
-            switch($e->getStatusCode())
-            {
-                case 404:
-                    return response()->json([
-                        'message' => 'Invalid API endpoint specified',
-                        'statusCode' => $e->getStatusCode()
-                    ]);
-                break;
-                default:
-                    return response()->json([
-                        'message' => $e->getMessage(),
-                        'statusCode' => $e->getStatusCode()
-                    ]);
-                break;
-
-            }
+//            switch($e->getStatusCode())
+//            {
+//                case 404:
+//                    return response()->json([
+//                        'message' => 'Invalid API endpoint specified',
+//                        'statusCode' => $e->getStatusCode()
+//                    ]);
+//                break;
+//                default:
+//
+//                    return response()->json([
+//                        'message' => $e->getMessage(),
+//                        'statusCode' => $e->getStatusCode()
+//                    ]);
+//                break;
+//
+//            }
         }
 
         return parent::render($request, $e);
