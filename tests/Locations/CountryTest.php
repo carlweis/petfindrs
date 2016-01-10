@@ -1,11 +1,11 @@
 <?php
 
 use Laravel\Lumen\Testing\DatabaseMigrations;
-use Laravel\Lumen\Testing\DatabaseTransactions;
 
 class CountryTest extends TestCase
 {
     use DatabaseMigrations;
+
     /**
      * @test
      */
@@ -22,5 +22,14 @@ class CountryTest extends TestCase
     {
         return $this->get('/v1/locations/countries')
             ->seeJson(['name' => 'United States', 'code' => 'US']);
+    }
+
+    /**
+     * @test
+     */
+    public function can_retrieve_all_active_countries()
+    {
+        $response = $this->call('GET', 'v1/locations/countries/active');
+        return $this->assertEquals(200, $response->getStatusCode());
     }
 }

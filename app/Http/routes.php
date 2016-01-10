@@ -23,12 +23,8 @@ $app->get('/', function () use ($app) {
 
 
 // API Version 1
-$app->group(['namespace' => 'V1', 'prefix' => 'v1'], function() use($app) {
-
-
-    $app->group(['namespace' => 'App\Http\Controllers\V1\Locations', 'prefix' => 'v1/locations'], function() use($app) {
-        $app->get('countries', 'CountryController@index');
-    });
-
+$app->group(['namespace' => 'App\Http\Controllers\V1\Locations', 'prefix' => 'v1/locations'], function() use($app) {
+    $app->get('countries', 'CountryController@index');
+    $app->get('countries/active', 'CountryController@active');
 });
 

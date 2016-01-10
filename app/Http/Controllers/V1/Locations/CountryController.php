@@ -42,4 +42,16 @@ class CountryController extends ApiController
         }
         return $this->respondWithCORS($data);
     }
+
+    public function active(Manager $fractal, CountryTransformer $countryTransformer)
+    {
+        $countries = $this->countryRepository->active();
+        $collection = new Collection($countries, $countryTransformer);
+        $data = $fractal->createData($collection)->toArray();
+
+        if (!$data) {
+            return $this->respondWithError('No Active Countries Available');
+        }
+        return $this->respondWithCORS($data);
+    }
 }
