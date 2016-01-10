@@ -1,4 +1,3 @@
-
 var gulp    = require('gulp');
 var phpunit = require('gulp-phpunit');
 
@@ -10,7 +9,10 @@ gulp.task('phpunit', function() {
 
 gulp.task('default', function(){
     gulp.run('phpunit');
-    gulp.watch('app/**/*.php', function(){
+    gulp.watch([
+        'app/**/*.php',
+        'tests/**/*.php'
+    ], function(){
         gulp.run('phpunit');
     });
 });
