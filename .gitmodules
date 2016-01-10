@@ -1,0 +1,3 @@
+[submodule "app/PetFinders"]
+	path = app/PetFinders
+	url = git@github.com:petfindrs-core
