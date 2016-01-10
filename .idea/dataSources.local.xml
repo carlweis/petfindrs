@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - petfindrs@127.0.0.1" uuid="87321517-e669-4ec9-a6ff-87ffc4ff0dda">
+      <secret-storage>master_key</secret-storage>
+      <user-name>homestead</user-name>
+      <schema-pattern>petfindrs.*</schema-pattern>
+      <default-schemas>petfindrs.*</default-schemas>
+    </data-source>
+  </component>
+</project>

@@ -11,6 +11,15 @@ Use for testing branches, before merging into master.
 
 ## Resources
 
+#### Locations
+     - United States
+      - All 50 States
+       - Top 10 Cities
+     *Resources*
+     Country
+     State
+     City
+
 ## Endpoints
 
 ## Tests
