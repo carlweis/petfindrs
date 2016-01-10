@@ -1,9 +1,11 @@
 <?php
 
-
+use Laravel\Lumen\Testing\DatabaseMigrations;
+use Laravel\Lumen\Testing\DatabaseTransactions;
 
 class CountryTest extends TestCase
 {
+    use DatabaseMigrations;
     /**
      * @test
      */
