@@ -51,7 +51,7 @@ base token JWT authentication, in the second tutorial/video.
 - Push project to GitHub
 - Create base ApiController & commit
 - Setup error handling for 404 errors and any server errors, to return JSON by default.
-- Setup default response for root route ('Invalid Endpoint Specified')
+- Setup default response for root route ('PetFindrs v1.0')
 - Test Endpoint using curl: curl -i http://api.petfindrs.dev | python -mjson.tool
 - Define the requirements.md for the API ( This document should be updated, as you make changes to the API. )
 

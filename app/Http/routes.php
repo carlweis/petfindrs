@@ -12,5 +12,11 @@
 */
 
 $app->get('/', function () use ($app) {
-    return 'PetFindrs v1.0';
+    return response()
+        ->json([
+            'name' => 'PetFindrs API',
+            'version' => '1.0',
+            'statusCode' => 200
+        ])
+        ->header('Content-Type', 'application/json');
 });
