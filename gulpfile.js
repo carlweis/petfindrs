@@ -5,15 +5,14 @@ gulp.task('phpunit', function() {
     var options = {
         debug: false,
         verbose: true,
-        tap: true,
-        colors: 'always'
+        tap: true
     };
     gulp.src('phpunit.xml')
         .pipe(phpunit('./vendor/bin/phpunit',options));
 });
 
 gulp.task('default', function(){
-
+    gulp.run('phpunit');
     gulp.watch([
         'app/**/*.php',
         'tests/**/*.php'
