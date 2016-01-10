@@ -1,4 +1,6 @@
 # PetFindrs API
+[![Build Status](https://travis-ci.org/carlweis/petfindrs.svg?branch=master)](https://travis-ci.org/carlweis/petfindrs)
+
 Build a REST API, which allows users to sign up and post listings of lost pets,
 along with an AngularJS client-side application to consume the API. Use OAuth
 token based authentication.
