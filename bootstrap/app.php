@@ -87,6 +87,7 @@ $app->singleton(
 |--------------------------------------------------------------------------
 */
 //$app->register(App\PetFindrs\Locations\LocationServiceProvider::class);
+$app->register('App\PetFindrs\Locations\LocationServiceProvder');
 
 
 /*
