@@ -24,6 +24,7 @@ Use for testing branches, before merging into master.
         - findByName
         - findByLocation ( lat, lon)
      State
+     
      City
 
 ## Endpoints
