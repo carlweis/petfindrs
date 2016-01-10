@@ -14,7 +14,7 @@
 $app->get('/', function () use ($app) {
     return response()
         ->json([
-            'name' => 'PetFinders API',
+            'name' => 'PetFindrs API',
             'version' => '1.0',
             'statusCode' => 200
         ])
