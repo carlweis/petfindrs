@@ -1,4 +1,4 @@
 /vendor
-/node-modules
+/node_modules
 .env
 

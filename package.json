@@ -1,0 +1,34 @@
+{
+  "name": "petfindrs_api",
+  "version": "1.0.0",
+  "description": "Listing database for lost pets.",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlweis/petfindrs.git"
+  },
+  "keywords": [
+    "Pets",
+    "Laravel",
+    "Lumen",
+    "REST",
+    "Listings",
+    "Classifieds"
+  ],
+  "author": "Carl Weis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlweis/petfindrs/issues"
+  },
+  "homepage": "https://github.com/carlweis/petfindrs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-phpunit": "^0.11.3"
+  }
+}
